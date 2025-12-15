@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Simple Website</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #f4f6f9;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        nav a:hover {
+            background: #2c3e50;
+        }
+        .container {
+            display: flex;
+            min-height: calc(100vh - 120px);
+        }
+        .sidebar {
+            background: #ecf0f1;
+            width: 250px;
+            padding: 2rem;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-size: 1.3rem;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar li {
+            margin: 0.7rem 0;
+        }
+        .sidebar a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .sidebar a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        main {
+            flex: 1;
+            padding: 2rem;
+            background: white;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .page h2 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        .page p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .page ul, .page ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .page table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .page th, .page td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .page th {
+            background: #3498db;
+            color: white;
+        }
+        .page tr:hover {
+            background: #f8f9fa;
+        }
+        .highlight {
+            background: #e8f5e8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+        footer p {
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                order: 2;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav li {
+                margin: 0.3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>✨ Improved Simple Website</h1>
+        <p>Pure HTML & CSS, no heavy JavaScript</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">🏠 Home</a></li>
+            <li><a href="#about">👤 About</a></li>
+            <li><a href="#services">⚙️ Services</a></li>
+            <li><a href="#contact">📞 Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home Page</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </aside>
+        
+        <main>
+            <section id="home" class="page active">
+                <h2>Welcome to Our Website</h2>
+                <p>This is a clean, modern website built with only HTML and CSS. No JavaScript is required for basic functionality.</p>
+                <p>Navigate using the menu or sidebar links to explore different pages.</p>
+                <ul>
+                    <li>✅ Responsive layout</li>
+                    <li>✅ Multiple dynamic pages</li>
+                    <li>✅ Professional styling</li>
+                    <li>✅ Easy to customize</li>
+                </ul>
+            </section>
+            
+            <section id="about" class="page">
+                <h2>About Us</h2>
+                <p>We focus on creating simple, fast, and accessible websites. Our philosophy is minimalism and performance.</p>
+                <p>Our websites are built with semantic HTML and modern CSS for the best user experience.</p>
+                <div class="highlight">
+                    <strong>Why Choose Us?</strong>
+                    <ul>
+                        <li>Fast loading times</li>
+                        <li>SEO friendly</li>
+                        <li>Mobile responsive</li>
+                        <li>No JavaScript bloat</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="services" class="page">
+                <h2>Our Services</h2>
+                <p>We offer a range of web solutions:</p>
+                <table>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Website Design</td>
+                        <td>Modern, responsive layouts</td>
+                    </tr>
+                    <tr>
+                        <td>HTML/CSS Coding</td>
+                        <td>Clean, semantic markup</td>
+                    </tr>
+                    <tr>
+                        <td>SEO Optimization</td>
+                        <td>Search engine ready</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <section id="contact" class="page">
+                <h2>Contact Information</h2>
+                <p>Ready to collaborate? Get in touch with us:</p>
+                <div class="highlight">
+                    <p><strong>📧 Email:</strong> hello@simplewebsite.com</p>
+                    <p><strong>📱 Phone:</strong> +91 98765 43210</p>
+                    <p><strong>📍 Location:</strong> Ghaziabad, UP, India</p>
+                </div>
+                <p>Explore more using the sidebar or navigation!</p>
+            </section>
+        </main>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Improved Simple Website. Made with ❤️ using HTML & CSS.</p>
+        <p>All pages work without JavaScript!</p>
+    </footer>
+
+    <script>
+        window.addEventListener('hashchange', function() {
+            const pages = document.querySelectorAll('.page');
+            const hash = window.location.hash || '#home';
+            pages.forEach(page => page.classList.remove('active'));
+            document.querySelector(hash)?.classList.add('active') || 
+            document.querySelector('#home').classList.add('active');
+        });
+        window.dispatchEvent(new HashChangeEvent('hashchange'));
+    </script>
+</body>
+</html>
